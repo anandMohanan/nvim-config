@@ -1,19 +1,49 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+
     -- Packer can manage itself
+    use {
+        'jinh0/eyeliner.nvim',
+        config = function()
+            require("eyeliner").setup({
+                highlight_on_key = true, -- show highlights only after keypress
+                dim = true,              -- dim all other characters if set to true (recommended!)
+            })
+        end
+    }
     use 'wbthomason/packer.nvim'
+
+
+    -- use {
+    --     'Exafunction/codeium.vim',
+    --     commit = "289eb724e5d6fab2263e94a1ad6e54afebefafb2",
+    -- }
+    use {
+        "supermaven-inc/supermaven-nvim",
+        config = function()
+            require("supermaven-nvim").setup({
+                keymaps = {
+                    accept_suggestion = "<Tab>",
+                    clear_suggestion = "<C-]>",
+                    accept_word = "<C-j>",
+                },
+                ignore_filetypes = { cpp = true },
+                color = {
+                    suggestion_color = "#808080",
+                    cterm = 244,
+                },
+                disable_inline_completion = false, -- disables inline completion for use with cmp
+                disable_keymaps = false -- disables built in keymaps for more manual control
+            })
+        end,
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-
-    use({
-        "rebelot/kanagawa.nvim",
-        as = "kanagawa",
-        config = function() vim.cmd('colorscheme kanagawa') end
-    })
+    use 'norcalli/nvim-colorizer.lua'
 
     use("nvim-treesitter/nvim-treesitter", { run = ':TSUpdate' })
     use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
