@@ -1,4 +1,4 @@
-vim.cmd.colorscheme("default")
+vim.cmd.colorscheme("oxocarbon")
 
 
 

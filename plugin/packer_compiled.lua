@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/neimand/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1720049189/share/lua/5.1/?/init.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1720049189/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/neimand/.cache/nvim/packer_hererocks/2.1.1720049189/lib/lua/5.1/?.so"
+local package_path_str = "/home/neimand/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/home/neimand/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/neimand/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -90,6 +90,12 @@ _G.packer_plugins = {
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["csvview.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fcsvview\frequire\0" },
+    loaded = true,
+    path = "/home/neimand/.local/share/nvim/site/pack/packer/start/csvview.nvim",
+    url = "https://github.com/hat0uma/csvview.nvim"
+  },
   ["eyeliner.nvim"] = {
     config = { "\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\21highlight_on_key\2\bdim\2\nsetup\reyeliner\frequire\0" },
     loaded = true,
@@ -116,6 +122,14 @@ _G.packer_plugins = {
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/neimand/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -136,6 +150,12 @@ _G.packer_plugins = {
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    config = { "\27LJ\2\né\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\topts\1\0\1\topts\0\1\0\3\17enable_close\2\26enable_close_on_slash\2\18enable_rename\2\nsetup\20nvim-ts-autotag\frequire\0" },
+    loaded = true,
+    path = "/home/neimand/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -147,7 +167,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["supermaven-nvim"] = {
-    config = { "\27LJ\2\n∫\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\2\21suggestion_color\f#808080\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\5\20disable_keymaps\1\ncolor\0\30disable_inline_completion\1\fkeymaps\0\21ignore_filetypes\0\1\0\3\16accept_word\n<C-j>\22accept_suggestion\n<Tab>\21clear_suggestion\n<C-]>\nsetup\20supermaven-nvim\frequire\0" },
+    config = { "\27LJ\2\n∫\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\2\21suggestion_color\f#808080\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\5\ncolor\0\30disable_inline_completion\1\20disable_keymaps\1\fkeymaps\0\21ignore_filetypes\0\1\0\3\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\21clear_suggestion\n<C-]>\nsetup\20supermaven-nvim\frequire\0" },
     loaded = true,
     path = "/home/neimand/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
     url = "https://github.com/supermaven-inc/supermaven-nvim"
@@ -170,6 +190,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: csvview.nvim
+time([[Config for csvview.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fcsvview\frequire\0", "config", "csvview.nvim")
+time([[Config for csvview.nvim]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\n∫\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\2\21suggestion_color\f#808080\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\5\ncolor\0\30disable_inline_completion\1\20disable_keymaps\1\fkeymaps\0\21ignore_filetypes\0\1\0\3\22accept_suggestion\n<Tab>\16accept_word\n<C-j>\21clear_suggestion\n<C-]>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
 -- Config for: eyeliner.nvim
 time([[Config for eyeliner.nvim]], true)
 try_loadstring("\27LJ\2\nT\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\21highlight_on_key\2\bdim\2\nsetup\reyeliner\frequire\0", "config", "eyeliner.nvim")
@@ -178,10 +206,17 @@ time([[Config for eyeliner.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: supermaven-nvim
-time([[Config for supermaven-nvim]], true)
-try_loadstring("\27LJ\2\n∫\2\0\0\4\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\2B\0\2\1K\0\1\0\ncolor\1\0\2\21suggestion_color\f#808080\ncterm\3Ù\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\5\20disable_keymaps\1\ncolor\0\30disable_inline_completion\1\fkeymaps\0\21ignore_filetypes\0\1\0\3\16accept_word\n<C-j>\22accept_suggestion\n<Tab>\21clear_suggestion\n<C-]>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
-time([[Config for supermaven-nvim]], false)
+-- Config for: nvim-ts-autotag
+time([[Config for nvim-ts-autotag]], true)
+try_loadstring("\27LJ\2\né\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\topts\1\0\1\topts\0\1\0\3\17enable_close\2\26enable_close_on_slash\2\18enable_rename\2\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
+time([[Config for nvim-ts-autotag]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
